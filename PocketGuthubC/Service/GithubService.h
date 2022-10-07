@@ -11,16 +11,17 @@
 
 #endif /* GithubService_h */
 
+#import "Repo.h"
+#import "CommitResponce.h"
  
-
-struct Repo {
-  
-};
-
 @interface GithubService : NSObject
-
+//Result<[CommitApiResponce], Error>) -> Void
 + (instancetype)shared;
-- (void)fetchRepos:(void (^)(void))completion;
-- (void)fetchCommitsFor:(void)repo :(void (^)(void))completion;
-
+- (void)fetchRepos
+  :(NSArray<Repo *> *_Nullable (^)(void))onSuccess
+  :(NSError *_Nullable (^)(void))onFailure;
+- (void)fetchCommitsFor
+  :(Repo *)repo
+  :(void (^)(NSArray<CommitResponce *>*_Nullable))onSuccess
+  :(void (^)(NSError *_Nullable))onFailure;
 @end

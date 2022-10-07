@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RepoListViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

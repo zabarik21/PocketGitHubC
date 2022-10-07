@@ -10,9 +10,14 @@
 #import "Interfaces/LoginViewController.h"
 #import "Interfaces/LoginViewInputProtocol.h"
 #import "../Service/AuthService.h"
-#import "UIColor/UIColorConstants.h"
 #import "LoginViewConfiguratorProtocol.h"
+#import "../Library/UIKit/UIViewController + UIAlertController.h"
+#import "../Library/Constants/UIColorConstants.h"
 
+@interface LoginViewController()
+@property (nonatomic, strong) UIImageView *logoView;
+@property (nonatomic, strong) UIButton *signInButton;
+@end
 
 @implementation LoginViewController
 
@@ -74,11 +79,11 @@ Constants const topFormMult = 0.088;
   [self.view addSubview: self.logoView];
   
   [self.logoView mas_makeConstraints:^(MASConstraintMaker *make) {
-      make.top
-        .equalTo(superview.mas_top)
-        .with.offset(height * topLogoMult);
-      make.centerX
-        .equalTo(superview.mas_centerX);
+    make.top
+      .equalTo(superview.mas_top)
+      .with.offset(height * topLogoMult);
+    make.centerX
+      .equalTo(superview.mas_centerX);
     make.height.width.equalTo(@(width - width * horizontalLogoMult * 2));
   }];
   
@@ -98,17 +103,7 @@ Constants const topFormMult = 0.088;
 }
 
 - (void)showAlert:(NSString *)title :(NSString *)message {
-  dispatch_async(dispatch_get_main_queue(), ^{
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
-                               message:message
-                               preferredStyle:UIAlertControllerStyleAlert];
-
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault
-                                   handler:^(UIAlertAction * action) {}];
-
-    [alert addAction:defaultAction];
-    [self presentViewController:alert animated:YES completion:nil];
-  });
+  [self showAlertWith:title :message];
 }
-
+  
 @end

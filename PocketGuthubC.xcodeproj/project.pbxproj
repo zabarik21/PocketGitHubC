@@ -11,6 +11,20 @@
 		7B8EFE4228F041ED00BB2A28 /* AuthConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE4128F041ED00BB2A28 /* AuthConstants.m */; };
 		7B8EFE4528F04BA100BB2A28 /* StorageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE4428F04BA100BB2A28 /* StorageService.m */; };
 		7B8EFE4828F04F8000BB2A28 /* GithubService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE4728F04F8000BB2A28 /* GithubService.m */; };
+		7B8EFE4F28F05F6300BB2A28 /* Commit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE4E28F05F6300BB2A28 /* Commit.m */; };
+		7B8EFE5128F05F9400BB2A28 /* CommitAuthor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE5028F05F9400BB2A28 /* CommitAuthor.m */; };
+		7B8EFE5628F05FFE00BB2A28 /* RepoOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE5528F05FFE00BB2A28 /* RepoOwner.m */; };
+		7B8EFE5828F0603A00BB2A28 /* GithubUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE5728F0603A00BB2A28 /* GithubUser.m */; };
+		7B8EFE5C28F060B000BB2A28 /* CommitResponce.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE5B28F060B000BB2A28 /* CommitResponce.m */; };
+		7B8EFE5F28F0615A00BB2A28 /* Repo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE5E28F0615A00BB2A28 /* Repo.m */; };
+		7B8EFE6328F0677700BB2A28 /* RepoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE6228F0677700BB2A28 /* RepoHeaderView.m */; };
+		7B8EFE6728F067EC00BB2A28 /* RepoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE6628F067EC00BB2A28 /* RepoListViewController.m */; };
+		7B8EFE6F28F0849E00BB2A28 /* RepoCellViewData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE6E28F0849E00BB2A28 /* RepoCellViewData.m */; };
+		7B8EFE7328F0855200BB2A28 /* UIViewController + UIAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE7228F0855200BB2A28 /* UIViewController + UIAlertController.m */; };
+		7B8EFE7728F089EE00BB2A28 /* CommitCellViewData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE7628F089EE00BB2A28 /* CommitCellViewData.m */; };
+		7B8EFE7A28F0904600BB2A28 /* RepoCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE7928F0904600BB2A28 /* RepoCellView.m */; };
+		7B8EFE7E28F0974C00BB2A28 /* RepoCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE7D28F0974C00BB2A28 /* RepoCountView.m */; };
+		7B8EFE8128F0A1FD00BB2A28 /* CircleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE8028F0A1FD00BB2A28 /* CircleImageView.m */; };
 		7B9465BA28A23A4B00DF123D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9465B928A23A4B00DF123D /* AppDelegate.m */; };
 		7B9465BD28A23A4B00DF123D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9465BC28A23A4B00DF123D /* SceneDelegate.m */; };
 		7B9465C028A23A4B00DF123D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9465BF28A23A4B00DF123D /* LoginViewController.m */; };
@@ -33,6 +47,36 @@
 		7B8EFE4428F04BA100BB2A28 /* StorageService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StorageService.m; sourceTree = "<group>"; };
 		7B8EFE4728F04F8000BB2A28 /* GithubService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GithubService.m; sourceTree = "<group>"; };
 		7B8EFE4928F04F8800BB2A28 /* GithubService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GithubService.h; sourceTree = "<group>"; };
+		7B8EFE4D28F05F5D00BB2A28 /* Commit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Commit.h; sourceTree = "<group>"; };
+		7B8EFE4E28F05F6300BB2A28 /* Commit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Commit.m; sourceTree = "<group>"; };
+		7B8EFE5028F05F9400BB2A28 /* CommitAuthor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommitAuthor.m; sourceTree = "<group>"; };
+		7B8EFE5228F05F9A00BB2A28 /* CommitAuthor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommitAuthor.h; sourceTree = "<group>"; };
+		7B8EFE5428F05FF900BB2A28 /* RepoOwner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepoOwner.h; sourceTree = "<group>"; };
+		7B8EFE5528F05FFE00BB2A28 /* RepoOwner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RepoOwner.m; sourceTree = "<group>"; };
+		7B8EFE5728F0603A00BB2A28 /* GithubUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GithubUser.m; sourceTree = "<group>"; };
+		7B8EFE5928F0603D00BB2A28 /* GithubUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GithubUser.h; sourceTree = "<group>"; };
+		7B8EFE5A28F060A900BB2A28 /* CommitResponce.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommitResponce.h; sourceTree = "<group>"; };
+		7B8EFE5B28F060B000BB2A28 /* CommitResponce.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommitResponce.m; sourceTree = "<group>"; };
+		7B8EFE5D28F0614700BB2A28 /* Repo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Repo.h; sourceTree = "<group>"; };
+		7B8EFE5E28F0615A00BB2A28 /* Repo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Repo.m; sourceTree = "<group>"; };
+		7B8EFE6228F0677700BB2A28 /* RepoHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RepoHeaderView.m; sourceTree = "<group>"; };
+		7B8EFE6428F0678B00BB2A28 /* RepoHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepoHeaderView.h; sourceTree = "<group>"; };
+		7B8EFE6528F067E700BB2A28 /* RepoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepoListViewController.h; sourceTree = "<group>"; };
+		7B8EFE6628F067EC00BB2A28 /* RepoListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RepoListViewController.m; sourceTree = "<group>"; };
+		7B8EFE6A28F0686D00BB2A28 /* ReuseIdProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReuseIdProtocol.h; sourceTree = "<group>"; };
+		7B8EFE6D28F0849800BB2A28 /* RepoCellViewData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepoCellViewData.h; sourceTree = "<group>"; };
+		7B8EFE6E28F0849E00BB2A28 /* RepoCellViewData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RepoCellViewData.m; sourceTree = "<group>"; };
+		7B8EFE7128F0854D00BB2A28 /* UIViewController + UIAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController + UIAlertController.h"; sourceTree = "<group>"; };
+		7B8EFE7228F0855200BB2A28 /* UIViewController + UIAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController + UIAlertController.m"; sourceTree = "<group>"; };
+		7B8EFE7428F0892400BB2A28 /* VIPER Protocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VIPER Protocols.h"; sourceTree = "<group>"; };
+		7B8EFE7528F089E500BB2A28 /* CommitCellViewData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommitCellViewData.h; sourceTree = "<group>"; };
+		7B8EFE7628F089EE00BB2A28 /* CommitCellViewData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommitCellViewData.m; sourceTree = "<group>"; };
+		7B8EFE7928F0904600BB2A28 /* RepoCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RepoCellView.m; sourceTree = "<group>"; };
+		7B8EFE7B28F0904A00BB2A28 /* RepoCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepoCellView.h; sourceTree = "<group>"; };
+		7B8EFE7C28F0974600BB2A28 /* RepoCountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepoCountView.h; sourceTree = "<group>"; };
+		7B8EFE7D28F0974C00BB2A28 /* RepoCountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RepoCountView.m; sourceTree = "<group>"; };
+		7B8EFE8028F0A1FD00BB2A28 /* CircleImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleImageView.m; sourceTree = "<group>"; };
+		7B8EFE8228F0A20B00BB2A28 /* CircleImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleImageView.h; sourceTree = "<group>"; };
 		7B9465B528A23A4B00DF123D /* PocketGuthubC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketGuthubC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B9465B828A23A4B00DF123D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7B9465B928A23A4B00DF123D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -79,8 +123,101 @@
 		7B8EFE4628F04F5500BB2A28 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7B8EFE4D28F05F5D00BB2A28 /* Commit.h */,
+				7B8EFE4E28F05F6300BB2A28 /* Commit.m */,
+				7B8EFE5028F05F9400BB2A28 /* CommitAuthor.m */,
+				7B8EFE5228F05F9A00BB2A28 /* CommitAuthor.h */,
+				7B8EFE5428F05FF900BB2A28 /* RepoOwner.h */,
+				7B8EFE5528F05FFE00BB2A28 /* RepoOwner.m */,
+				7B8EFE5728F0603A00BB2A28 /* GithubUser.m */,
+				7B8EFE5928F0603D00BB2A28 /* GithubUser.h */,
+				7B8EFE5A28F060A900BB2A28 /* CommitResponce.h */,
+				7B8EFE5B28F060B000BB2A28 /* CommitResponce.m */,
+				7B8EFE5D28F0614700BB2A28 /* Repo.h */,
+				7B8EFE5E28F0615A00BB2A28 /* Repo.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7B8EFE6028F0675900BB2A28 /* RepoListModule */ = {
+			isa = PBXGroup;
+			children = (
+				7B8EFE7828F0903100BB2A28 /* View */,
+				7B8EFE6C28F0849200BB2A28 /* Entity */,
+				7B8EFE6128F0676100BB2A28 /* RepoViewHeader */,
+				7B8EFE6528F067E700BB2A28 /* RepoListViewController.h */,
+				7B8EFE6628F067EC00BB2A28 /* RepoListViewController.m */,
+				7B8EFE7428F0892400BB2A28 /* VIPER Protocols.h */,
+			);
+			path = RepoListModule;
+			sourceTree = "<group>";
+		};
+		7B8EFE6128F0676100BB2A28 /* RepoViewHeader */ = {
+			isa = PBXGroup;
+			children = (
+				7B8EFE6228F0677700BB2A28 /* RepoHeaderView.m */,
+				7B8EFE6428F0678B00BB2A28 /* RepoHeaderView.h */,
+			);
+			path = RepoViewHeader;
+			sourceTree = "<group>";
+		};
+		7B8EFE6828F0685B00BB2A28 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				7BEA52DD28A38C06001405F8 /* Constants */,
+				7B8EFE7028F0851A00BB2A28 /* UIKit */,
+				7B8EFE6928F0685F00BB2A28 /* Protocols */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		7B8EFE6928F0685F00BB2A28 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7B8EFE6A28F0686D00BB2A28 /* ReuseIdProtocol.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7B8EFE6C28F0849200BB2A28 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				7B8EFE6D28F0849800BB2A28 /* RepoCellViewData.h */,
+				7B8EFE6E28F0849E00BB2A28 /* RepoCellViewData.m */,
+				7B8EFE7528F089E500BB2A28 /* CommitCellViewData.h */,
+				7B8EFE7628F089EE00BB2A28 /* CommitCellViewData.m */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		7B8EFE7028F0851A00BB2A28 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				7B8EFE7F28F0A1F300BB2A28 /* View */,
+				7B8EFE7128F0854D00BB2A28 /* UIViewController + UIAlertController.h */,
+				7B8EFE7228F0855200BB2A28 /* UIViewController + UIAlertController.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		7B8EFE7828F0903100BB2A28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B8EFE7928F0904600BB2A28 /* RepoCellView.m */,
+				7B8EFE7B28F0904A00BB2A28 /* RepoCellView.h */,
+				7B8EFE7C28F0974600BB2A28 /* RepoCountView.h */,
+				7B8EFE7D28F0974C00BB2A28 /* RepoCountView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B8EFE7F28F0A1F300BB2A28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B8EFE8028F0A1FD00BB2A28 /* CircleImageView.m */,
+				7B8EFE8228F0A20B00BB2A28 /* CircleImageView.h */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		7B9465AC28A23A4B00DF123D = {
@@ -104,6 +241,8 @@
 		7B9465B728A23A4B00DF123D /* PocketGuthubC */ = {
 			isa = PBXGroup;
 			children = (
+				7B8EFE6828F0685B00BB2A28 /* Library */,
+				7B8EFE6028F0675900BB2A28 /* RepoListModule */,
 				7B8EFE4628F04F5500BB2A28 /* Model */,
 				7BEA52E228A38F83001405F8 /* Service */,
 				7B9465D428A24A5800DF123D /* LoginModule */,
@@ -122,7 +261,6 @@
 		7B9465D428A24A5800DF123D /* LoginModule */ = {
 			isa = PBXGroup;
 			children = (
-				7BEA52DD28A38C06001405F8 /* UIColor */,
 				7B9465DD28A250FC00DF123D /* Interfaces */,
 				7B9465BF28A23A4B00DF123D /* LoginViewController.m */,
 				7B9465E128A2566A00DF123D /* LoginInteractor.m */,
@@ -149,13 +287,13 @@
 			path = Interfaces;
 			sourceTree = "<group>";
 		};
-		7BEA52DD28A38C06001405F8 /* UIColor */ = {
+		7BEA52DD28A38C06001405F8 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
 				7BEA52DF28A38C2D001405F8 /* UIColorConstants.m */,
 				7BEA52E128A38E62001405F8 /* UIColorConstants.h */,
 			);
-			path = UIColor;
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		7BEA52E228A38F83001405F8 /* Service */ = {
@@ -309,16 +447,30 @@
 			files = (
 				7B9465E228A2566A00DF123D /* LoginInteractor.m in Sources */,
 				7BEA52E028A38C2D001405F8 /* UIColorConstants.m in Sources */,
+				7B8EFE4F28F05F6300BB2A28 /* Commit.m in Sources */,
 				7B9465C028A23A4B00DF123D /* LoginViewController.m in Sources */,
 				7B8EFE4228F041ED00BB2A28 /* AuthConstants.m in Sources */,
+				7B8EFE7A28F0904600BB2A28 /* RepoCellView.m in Sources */,
 				7BAF2F2928EFFFE30091C112 /* LoginViewConfigurator.m in Sources */,
 				7B8EFE4528F04BA100BB2A28 /* StorageService.m in Sources */,
+				7B8EFE8128F0A1FD00BB2A28 /* CircleImageView.m in Sources */,
+				7B8EFE7E28F0974C00BB2A28 /* RepoCountView.m in Sources */,
+				7B8EFE5628F05FFE00BB2A28 /* RepoOwner.m in Sources */,
 				7BEA52E428A38FD6001405F8 /* AuthService.m in Sources */,
+				7B8EFE5128F05F9400BB2A28 /* CommitAuthor.m in Sources */,
+				7B8EFE6F28F0849E00BB2A28 /* RepoCellViewData.m in Sources */,
 				7B9465BA28A23A4B00DF123D /* AppDelegate.m in Sources */,
 				7B9465D728A24EDF00DF123D /* LoginPresenter.m in Sources */,
+				7B8EFE5828F0603A00BB2A28 /* GithubUser.m in Sources */,
+				7B8EFE6328F0677700BB2A28 /* RepoHeaderView.m in Sources */,
 				7BAF2F2C28F02C180091C112 /* LoginViewRouter.m in Sources */,
 				7B8EFE4828F04F8000BB2A28 /* GithubService.m in Sources */,
+				7B8EFE5C28F060B000BB2A28 /* CommitResponce.m in Sources */,
 				7B9465CB28A23A4D00DF123D /* main.m in Sources */,
+				7B8EFE5F28F0615A00BB2A28 /* Repo.m in Sources */,
+				7B8EFE7328F0855200BB2A28 /* UIViewController + UIAlertController.m in Sources */,
+				7B8EFE7728F089EE00BB2A28 /* CommitCellViewData.m in Sources */,
+				7B8EFE6728F067EC00BB2A28 /* RepoListViewController.m in Sources */,
 				7B9465BD28A23A4B00DF123D /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

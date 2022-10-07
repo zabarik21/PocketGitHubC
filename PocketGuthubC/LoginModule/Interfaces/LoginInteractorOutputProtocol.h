@@ -11,8 +11,8 @@
 
 #endif /* LoginInteractorOutputProtocol_h */
 
-#import "LoginViewInputProtocol.h"
 #import <Foundation/Foundation.h>
+#import "LoginViewInputProtocol.h"
 
 @protocol LoginInteractorOutputProtocol <NSObject>
 @required

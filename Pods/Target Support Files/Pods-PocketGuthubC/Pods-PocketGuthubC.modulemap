@@ -1,0 +1,6 @@
+framework module Pods_PocketGuthubC {
+  umbrella header "Pods-PocketGuthubC-umbrella.h"
+
+  export *
+  module * { export * }
+}

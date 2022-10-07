@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Masonry.h"
-#import "LoginViewController.h"
+#import "Interfaces/LoginViewController.h"
 #import "Interfaces/LoginViewInputProtocol.h"
 #import "../Service/AuthService.h"
 #import "UIColor/UIColorConstants.h"

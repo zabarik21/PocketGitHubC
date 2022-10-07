@@ -6,7 +6,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "Service/AuthService.h"
+#import "Service/GithubService.h"
 @interface AppDelegate ()
   
 @end
@@ -15,7 +16,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  
   if (@available(iOS 13.0, *)) {
     
   } else {
@@ -24,15 +24,19 @@
     self.window.rootViewController = controller;
     [self.window makeKeyAndVisible];
   }
-  
-  
   return YES;
 }
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-  
-  
-  return TRUE;
+  NSString *sourceApp = [options valueForKey: UIApplicationOpenURLOptionsSourceApplicationKey];
+  NSLog(@"%@", sourceApp);
+  if ([sourceApp  isEqual: @"com.apple.SafariViewService"] || [sourceApp  isEqual: @"com.apple.mobilesafari"]) {
+    if ([url.host  isEqual: @"oauth-callback"]) {
+      [AuthService.shared handleUrl:url];
+      return true;
+    }
+  }
+  return false;
 }
 
 
@@ -41,11 +45,6 @@
 
 - (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options  API_AVAILABLE(ios(13.0)){
   return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
-}
-
-
-- (void)application:(UIApplication *)application didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
-  
 }
 
 

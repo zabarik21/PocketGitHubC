@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <AFNetworking/AFNetworking.h>
 #import "AuthService.h"
+#import "AuthConstants.h"
+#import "StorageService.h"
 
 @interface AuthService()
 
@@ -18,29 +20,16 @@
 -(NSString *)getCodeFrom:(NSURL*)url;
 @end
 
-
 @implementation AuthService
-
-static NSString *const loginObserverKey = @"loginObserver";
-static NSString *const clientIdKey = @"client_id";
-static NSString *const clientId = @"1a9af791d200ed9ae525";
-static NSString *const cliendSecretKey = @"client_secret";
-static NSString *const cliendSecret = @"fb66ec5f993635aa301146e21efb129da8e432f7";
-static NSString *const codeKey = @"code";
-static NSString *const redirectURIKey = @"redirect_uri";
-static NSString *const redirectURI = @"pocket-github://oauth-callback";
-static NSString *const authorizeURL = @"https://github.com/login/oauth/authorize";
-static NSString *const accessTokenURL = @"https://github.com/login/oauth/access_token";
-
 
 + (instancetype)shared
 {
-    static AuthService *sharedInstance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        sharedInstance = [[AuthService alloc] init];
-    });
-    return sharedInstance;
+  static AuthService *sharedInstance = nil;
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    sharedInstance = [[AuthService alloc] init];
+  });
+  return sharedInstance;
 }
 
 -(id)init {
@@ -70,14 +59,14 @@ static NSString *const accessTokenURL = @"https://github.com/login/oauth/access_
   NSString *code = [self getCodeFrom:url];
   if (code == nil) { return; }
   
-  NSDictionary<NSString*, NSString*> *items = [NSDictionary new];
+  NSMutableDictionary<NSString*, NSString*> *items = [NSMutableDictionary new];
   
   [items setValue:clientId forKey:clientIdKey];
   [items setValue:cliendSecret forKey:cliendSecretKey];
   [items setValue:redirectURI forKey:redirectURIKey];
   [items setValue:code forKey:codeKey];
   
-  NSDictionary<NSString*, NSString*> *params = [NSDictionary new];
+  NSMutableDictionary<NSString*, NSString*> *params = [NSMutableDictionary new];
   [params setValue:@"application/json" forKey:@"Accept"];
   
   AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -94,28 +83,28 @@ static NSString *const accessTokenURL = @"https://github.com/login/oauth/access_
     NSLog(@"Error %@", error);
   }];
 }
-    
+
 -(void)handleCodeResponce:(id  _Nullable)responseObject {
-  if ([responseObject isKindOfClass:[NSArray class]]) {
-      NSArray *responseArray = responseObject;
-      NSLog(@"Array: %@", responseArray);
-  } else if ([responseObject isKindOfClass:[NSDictionary class]]) {
-      NSDictionary *responseDict = responseObject;
-      NSLog(@"Dict: %@", responseDict);
+  if ([responseObject isKindOfClass:[NSDictionary class]]) {
+    NSDictionary *responseDict = responseObject;
+    NSLog(@"Dict: %@", responseDict);
+    NSString *key = responseDict[accessTokenKey];
+    [StorageService.shared saveToken:key];
+    [self pushNotification];
   }
 }
 
 -(void)pushNotification {
   [_notification
-     postNotificationName:loginObserverKey
-     object:nil
+   postNotificationName:loginObserverKey
+   object:nil
   ];
 }
 
 -(NSString *_Nullable)getCodeFrom:(NSURL*)url {
   NSArray<NSURLQueryItem *> *_Nullable items = [[NSURLComponents
-                           componentsWithURL:url
-                           resolvingAgainstBaseURL:true] queryItems];
+                                                 componentsWithURL:url
+                                                 resolvingAgainstBaseURL:true] queryItems];
   if (items == nil) { return nil; }
   
   NSUInteger count = [items count];

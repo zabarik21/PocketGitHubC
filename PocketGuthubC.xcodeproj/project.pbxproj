@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2A8B73FB79E5244892401810 /* Pods_PocketGuthubC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DB156D205CBF3C7C3C9779 /* Pods_PocketGuthubC.framework */; };
+		7B8EFE4228F041ED00BB2A28 /* AuthConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE4128F041ED00BB2A28 /* AuthConstants.m */; };
+		7B8EFE4528F04BA100BB2A28 /* StorageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE4428F04BA100BB2A28 /* StorageService.m */; };
+		7B8EFE4828F04F8000BB2A28 /* GithubService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE4728F04F8000BB2A28 /* GithubService.m */; };
 		7B9465BA28A23A4B00DF123D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9465B928A23A4B00DF123D /* AppDelegate.m */; };
 		7B9465BD28A23A4B00DF123D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9465BC28A23A4B00DF123D /* SceneDelegate.m */; };
 		7B9465C028A23A4B00DF123D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9465BF28A23A4B00DF123D /* LoginViewController.m */; };
@@ -24,6 +27,12 @@
 
 /* Begin PBXFileReference section */
 		03DB156D205CBF3C7C3C9779 /* Pods_PocketGuthubC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketGuthubC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B8EFE4028F041A900BB2A28 /* AuthConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthConstants.h; sourceTree = "<group>"; };
+		7B8EFE4128F041ED00BB2A28 /* AuthConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthConstants.m; sourceTree = "<group>"; };
+		7B8EFE4328F04B9B00BB2A28 /* StorageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StorageService.h; sourceTree = "<group>"; };
+		7B8EFE4428F04BA100BB2A28 /* StorageService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StorageService.m; sourceTree = "<group>"; };
+		7B8EFE4728F04F8000BB2A28 /* GithubService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GithubService.m; sourceTree = "<group>"; };
+		7B8EFE4928F04F8800BB2A28 /* GithubService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GithubService.h; sourceTree = "<group>"; };
 		7B9465B528A23A4B00DF123D /* PocketGuthubC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketGuthubC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B9465B828A23A4B00DF123D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7B9465B928A23A4B00DF123D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +76,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B8EFE4628F04F5500BB2A28 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7B9465AC28A23A4B00DF123D = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +104,7 @@
 		7B9465B728A23A4B00DF123D /* PocketGuthubC */ = {
 			isa = PBXGroup;
 			children = (
+				7B8EFE4628F04F5500BB2A28 /* Model */,
 				7BEA52E228A38F83001405F8 /* Service */,
 				7B9465D428A24A5800DF123D /* LoginModule */,
 				7B9465B828A23A4B00DF123D /* AppDelegate.h */,
@@ -107,7 +124,6 @@
 			children = (
 				7BEA52DD28A38C06001405F8 /* UIColor */,
 				7B9465DD28A250FC00DF123D /* Interfaces */,
-				7B9465BE28A23A4B00DF123D /* LoginViewController.h */,
 				7B9465BF28A23A4B00DF123D /* LoginViewController.m */,
 				7B9465E128A2566A00DF123D /* LoginInteractor.m */,
 				7B9465D628A24EDF00DF123D /* LoginPresenter.m */,
@@ -125,6 +141,7 @@
 				7B9465DE28A2510900DF123D /* LoginViewRouterProtocol.h */,
 				7B9465DF28A2511B00DF123D /* LoginInteractorOutputProtocol.h */,
 				7B9465E028A253BF00DF123D /* LoginInteractorInputProtocol.h */,
+				7B9465BE28A23A4B00DF123D /* LoginViewController.h */,
 				7BAF2F2728EFFE5B0091C112 /* LoginViewConfiguratorProtocol.h */,
 				7BAF2F2A28F023790091C112 /* LoginViewPresenter.h */,
 				7BAF2F2D28F02D410091C112 /* LoginViewInteractor.h */,
@@ -146,6 +163,12 @@
 			children = (
 				7BEA52E328A38FD6001405F8 /* AuthService.m */,
 				7BEA52E528A3FE83001405F8 /* AuthService.h */,
+				7B8EFE4028F041A900BB2A28 /* AuthConstants.h */,
+				7B8EFE4128F041ED00BB2A28 /* AuthConstants.m */,
+				7B8EFE4328F04B9B00BB2A28 /* StorageService.h */,
+				7B8EFE4428F04BA100BB2A28 /* StorageService.m */,
+				7B8EFE4728F04F8000BB2A28 /* GithubService.m */,
+				7B8EFE4928F04F8800BB2A28 /* GithubService.h */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -287,11 +310,14 @@
 				7B9465E228A2566A00DF123D /* LoginInteractor.m in Sources */,
 				7BEA52E028A38C2D001405F8 /* UIColorConstants.m in Sources */,
 				7B9465C028A23A4B00DF123D /* LoginViewController.m in Sources */,
+				7B8EFE4228F041ED00BB2A28 /* AuthConstants.m in Sources */,
 				7BAF2F2928EFFFE30091C112 /* LoginViewConfigurator.m in Sources */,
+				7B8EFE4528F04BA100BB2A28 /* StorageService.m in Sources */,
 				7BEA52E428A38FD6001405F8 /* AuthService.m in Sources */,
 				7B9465BA28A23A4B00DF123D /* AppDelegate.m in Sources */,
 				7B9465D728A24EDF00DF123D /* LoginPresenter.m in Sources */,
 				7BAF2F2C28F02C180091C112 /* LoginViewRouter.m in Sources */,
+				7B8EFE4828F04F8000BB2A28 /* GithubService.m in Sources */,
 				7B9465CB28A23A4D00DF123D /* main.m in Sources */,
 				7B9465BD28A23A4B00DF123D /* SceneDelegate.m in Sources */,
 			);

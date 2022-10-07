@@ -37,6 +37,7 @@
    :@"Please wait"
    :@"You will be logged in a few seconds"
   ];
+  [self.router toRepoList];
 }
 
 @end

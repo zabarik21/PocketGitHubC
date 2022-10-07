@@ -10,8 +10,11 @@
 #import "LoginInteractorOutputProtocol.h"
 #import "Interfaces/LoginViewInteractor.h"
 #import "../Service/AuthService.h"
+#import "../Service/AuthConstants.h"
 
-
+@interface LoginInteractor()
+-(void)authenticationSucceed;
+@end
 
 
 @implementation LoginInteractor
@@ -20,20 +23,25 @@
   self = [super init];
   if (self) {
     _presenter = presenter;
+    _authService = AuthService.shared;
   }
   return self;
 }
 
 -(void)authenticationSucceed {
   [_presenter authenticatedSuccessful];
-};
+}
 
 -(void)startAuthentication {
 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-  [self authenticationSucceed];
+  [self.authService tryOauth];
+  [NSNotificationCenter.defaultCenter
+   addObserver:self
+   selector:@selector(authenticationSucceed)
+   name: clientIdKey
+     object:self
+  ];
 });
-  
-  
   
 }
 

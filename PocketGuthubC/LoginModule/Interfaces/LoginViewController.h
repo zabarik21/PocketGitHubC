@@ -7,9 +7,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "Interfaces/LoginViewOutputProtocol.h"
-#import "Interfaces/LoginViewInputProtocol.h"
-#import "Interfaces/LoginViewConfiguratorProtocol.h"
+#import "LoginViewOutputProtocol.h"
+#import "LoginViewInputProtocol.h"
+#import "LoginViewConfiguratorProtocol.h"
 
 
 @interface LoginViewController: UIViewController<LoginViewInputProtocol>

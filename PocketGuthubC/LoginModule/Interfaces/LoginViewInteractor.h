@@ -17,8 +17,9 @@
 
 @property(nonatomic, strong) id<LoginInteractorOutputProtocol> presenter;
 @property (nonatomic, strong) AuthService *authService;
-//@property(nonatomic, strong)
 - (void)startAuthentication;
 - (void)authenticationSucceed;
 -(instancetype)initWithPresenter:(id<LoginInteractorOutputProtocol>)presenter;
 @end
+
+

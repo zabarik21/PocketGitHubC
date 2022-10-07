@@ -5,8 +5,11 @@
 //  Created by Timofey on 9/8/22.
 //
 
+#define assumeNotNull(_value) \
+    ({ if (!_value) abort(); __auto_type const _temp = _value; _temp; })
+
 #import "SceneDelegate.h"
-#import "LoginModule/LoginViewController.h"
+#import "LoginModule/Interfaces/LoginViewController.h"
 #import "Service/AuthService.h"
 @interface SceneDelegate ()
 
@@ -14,6 +17,16 @@
 
 @implementation SceneDelegate
 
+- (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts  API_AVAILABLE(ios(13.0)){
+  NSURL * _Nullable url = [URLContexts anyObject].URL;
+  if (url) {
+    NSURL * nonNullURL = assumeNotNull(url);
+    NSLog(@"%@", nonNullURL);
+    if ([nonNullURL.host  isEqual: @"oauth-callback"]) {
+      [AuthService.shared handleUrl:nonNullURL];
+    }
+  }
+}
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions  API_AVAILABLE(ios(13.0)) {
  
@@ -26,12 +39,6 @@
     window.rootViewController = viewController;
     [window makeKeyAndVisible];
   }
-
-}
-
-
-- (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts API_AVAILABLE(ios(13.0)){
-  NSURL *callBackUrl = [[URLContexts allObjects] firstObject].URL;
 
 }
 

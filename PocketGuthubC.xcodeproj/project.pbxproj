@@ -7,28 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A8B73FB79E5244892401810 /* Pods_PocketGuthubC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DB156D205CBF3C7C3C9779 /* Pods_PocketGuthubC.framework */; };
 		7B9465BA28A23A4B00DF123D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9465B928A23A4B00DF123D /* AppDelegate.m */; };
 		7B9465BD28A23A4B00DF123D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9465BC28A23A4B00DF123D /* SceneDelegate.m */; };
-		7B9465C028A23A4B00DF123D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9465BF28A23A4B00DF123D /* ViewController.m */; };
-		7B9465C328A23A4B00DF123D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9465C128A23A4B00DF123D /* Main.storyboard */; };
-		7B9465C528A23A4D00DF123D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9465C428A23A4D00DF123D /* Assets.xcassets */; };
+		7B9465C028A23A4B00DF123D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9465BF28A23A4B00DF123D /* LoginViewController.m */; };
 		7B9465C828A23A4D00DF123D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9465C628A23A4D00DF123D /* LaunchScreen.storyboard */; };
 		7B9465CB28A23A4D00DF123D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9465CA28A23A4D00DF123D /* main.m */; };
+		7B9465D728A24EDF00DF123D /* LoginPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9465D628A24EDF00DF123D /* LoginPresenter.m */; };
+		7B9465E228A2566A00DF123D /* LoginInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9465E128A2566A00DF123D /* LoginInteractor.m */; };
+		7B9465E428A2AFA900DF123D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9465E328A2AFA800DF123D /* Assets.xcassets */; };
+		7BAF2F2928EFFFE30091C112 /* LoginViewConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAF2F2828EFFFE30091C112 /* LoginViewConfigurator.m */; };
+		7BAF2F2C28F02C180091C112 /* LoginViewRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAF2F2B28F02C180091C112 /* LoginViewRouter.m */; };
+		7BEA52E028A38C2D001405F8 /* UIColorConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA52DF28A38C2D001405F8 /* UIColorConstants.m */; };
+		7BEA52E428A38FD6001405F8 /* AuthService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA52E328A38FD6001405F8 /* AuthService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03DB156D205CBF3C7C3C9779 /* Pods_PocketGuthubC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketGuthubC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B9465B528A23A4B00DF123D /* PocketGuthubC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketGuthubC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B9465B828A23A4B00DF123D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7B9465B928A23A4B00DF123D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7B9465BB28A23A4B00DF123D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		7B9465BC28A23A4B00DF123D /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		7B9465BE28A23A4B00DF123D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7B9465BF28A23A4B00DF123D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		7B9465C228A23A4B00DF123D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7B9465C428A23A4D00DF123D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7B9465BE28A23A4B00DF123D /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		7B9465BF28A23A4B00DF123D /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		7B9465C728A23A4D00DF123D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B9465C928A23A4D00DF123D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B9465CA28A23A4D00DF123D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7B9465D628A24EDF00DF123D /* LoginPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginPresenter.m; sourceTree = "<group>"; };
+		7B9465DB28A2509C00DF123D /* LoginViewOutputProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewOutputProtocol.h; sourceTree = "<group>"; };
+		7B9465DC28A250C600DF123D /* LoginViewInputProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewInputProtocol.h; sourceTree = "<group>"; };
+		7B9465DE28A2510900DF123D /* LoginViewRouterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewRouterProtocol.h; sourceTree = "<group>"; };
+		7B9465DF28A2511B00DF123D /* LoginInteractorOutputProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginInteractorOutputProtocol.h; sourceTree = "<group>"; };
+		7B9465E028A253BF00DF123D /* LoginInteractorInputProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginInteractorInputProtocol.h; sourceTree = "<group>"; };
+		7B9465E128A2566A00DF123D /* LoginInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginInteractor.m; sourceTree = "<group>"; };
+		7B9465E328A2AFA800DF123D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BAF2F2728EFFE5B0091C112 /* LoginViewConfiguratorProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewConfiguratorProtocol.h; sourceTree = "<group>"; };
+		7BAF2F2828EFFFE30091C112 /* LoginViewConfigurator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewConfigurator.m; sourceTree = "<group>"; };
+		7BAF2F2A28F023790091C112 /* LoginViewPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewPresenter.h; sourceTree = "<group>"; };
+		7BAF2F2B28F02C180091C112 /* LoginViewRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewRouter.m; sourceTree = "<group>"; };
+		7BAF2F2D28F02D410091C112 /* LoginViewInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewInteractor.h; sourceTree = "<group>"; };
+		7BEA52DF28A38C2D001405F8 /* UIColorConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIColorConstants.m; sourceTree = "<group>"; };
+		7BEA52E128A38E62001405F8 /* UIColorConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIColorConstants.h; sourceTree = "<group>"; };
+		7BEA52E328A38FD6001405F8 /* AuthService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthService.m; sourceTree = "<group>"; };
+		7BEA52E528A3FE83001405F8 /* AuthService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthService.h; sourceTree = "<group>"; };
+		8198F28B7C740FEAE890AE3F /* Pods-PocketGuthubC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketGuthubC.debug.xcconfig"; path = "Target Support Files/Pods-PocketGuthubC/Pods-PocketGuthubC.debug.xcconfig"; sourceTree = "<group>"; };
+		FA8471DF837EC04B3F63A03B /* Pods-PocketGuthubC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketGuthubC.release.xcconfig"; path = "Target Support Files/Pods-PocketGuthubC/Pods-PocketGuthubC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A8B73FB79E5244892401810 /* Pods_PocketGuthubC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +72,8 @@
 			children = (
 				7B9465B728A23A4B00DF123D /* PocketGuthubC */,
 				7B9465B628A23A4B00DF123D /* Products */,
+				AFF4E6D35FDBD0491C5D55BD /* Pods */,
+				8261A643E6956CA0D9873066 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,19 +88,83 @@
 		7B9465B728A23A4B00DF123D /* PocketGuthubC */ = {
 			isa = PBXGroup;
 			children = (
+				7BEA52E228A38F83001405F8 /* Service */,
+				7B9465D428A24A5800DF123D /* LoginModule */,
 				7B9465B828A23A4B00DF123D /* AppDelegate.h */,
 				7B9465B928A23A4B00DF123D /* AppDelegate.m */,
+				7B9465E328A2AFA800DF123D /* Assets.xcassets */,
 				7B9465BB28A23A4B00DF123D /* SceneDelegate.h */,
 				7B9465BC28A23A4B00DF123D /* SceneDelegate.m */,
-				7B9465BE28A23A4B00DF123D /* ViewController.h */,
-				7B9465BF28A23A4B00DF123D /* ViewController.m */,
-				7B9465C128A23A4B00DF123D /* Main.storyboard */,
-				7B9465C428A23A4D00DF123D /* Assets.xcassets */,
 				7B9465C628A23A4D00DF123D /* LaunchScreen.storyboard */,
 				7B9465C928A23A4D00DF123D /* Info.plist */,
 				7B9465CA28A23A4D00DF123D /* main.m */,
 			);
 			path = PocketGuthubC;
+			sourceTree = "<group>";
+		};
+		7B9465D428A24A5800DF123D /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				7BEA52DD28A38C06001405F8 /* UIColor */,
+				7B9465DD28A250FC00DF123D /* Interfaces */,
+				7B9465BE28A23A4B00DF123D /* LoginViewController.h */,
+				7B9465BF28A23A4B00DF123D /* LoginViewController.m */,
+				7B9465E128A2566A00DF123D /* LoginInteractor.m */,
+				7B9465D628A24EDF00DF123D /* LoginPresenter.m */,
+				7BAF2F2828EFFFE30091C112 /* LoginViewConfigurator.m */,
+				7BAF2F2B28F02C180091C112 /* LoginViewRouter.m */,
+			);
+			path = LoginModule;
+			sourceTree = "<group>";
+		};
+		7B9465DD28A250FC00DF123D /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				7B9465DB28A2509C00DF123D /* LoginViewOutputProtocol.h */,
+				7B9465DC28A250C600DF123D /* LoginViewInputProtocol.h */,
+				7B9465DE28A2510900DF123D /* LoginViewRouterProtocol.h */,
+				7B9465DF28A2511B00DF123D /* LoginInteractorOutputProtocol.h */,
+				7B9465E028A253BF00DF123D /* LoginInteractorInputProtocol.h */,
+				7BAF2F2728EFFE5B0091C112 /* LoginViewConfiguratorProtocol.h */,
+				7BAF2F2A28F023790091C112 /* LoginViewPresenter.h */,
+				7BAF2F2D28F02D410091C112 /* LoginViewInteractor.h */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		7BEA52DD28A38C06001405F8 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				7BEA52DF28A38C2D001405F8 /* UIColorConstants.m */,
+				7BEA52E128A38E62001405F8 /* UIColorConstants.h */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		7BEA52E228A38F83001405F8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7BEA52E328A38FD6001405F8 /* AuthService.m */,
+				7BEA52E528A3FE83001405F8 /* AuthService.h */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8261A643E6956CA0D9873066 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03DB156D205CBF3C7C3C9779 /* Pods_PocketGuthubC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFF4E6D35FDBD0491C5D55BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8198F28B7C740FEAE890AE3F /* Pods-PocketGuthubC.debug.xcconfig */,
+				FA8471DF837EC04B3F63A03B /* Pods-PocketGuthubC.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,15 +174,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B9465CE28A23A4D00DF123D /* Build configuration list for PBXNativeTarget "PocketGuthubC" */;
 			buildPhases = (
+				D1F5EA74E81B266470449A55 /* [CP] Check Pods Manifest.lock */,
 				7B9465B128A23A4B00DF123D /* Sources */,
 				7B9465B228A23A4B00DF123D /* Frameworks */,
 				7B9465B328A23A4B00DF123D /* Resources */,
+				061BFA8588F01FEB30F39B50 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = PocketGuthubC;
+			packageProductDependencies = (
+			);
 			productName = PocketGuthubC;
 			productReference = 7B9465B528A23A4B00DF123D /* PocketGuthubC.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +214,8 @@
 				Base,
 			);
 			mainGroup = 7B9465AC28A23A4B00DF123D;
+			packageReferences = (
+			);
 			productRefGroup = 7B9465B628A23A4B00DF123D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -133,21 +230,68 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B9465E428A2AFA900DF123D /* Assets.xcassets in Resources */,
 				7B9465C828A23A4D00DF123D /* LaunchScreen.storyboard in Resources */,
-				7B9465C528A23A4D00DF123D /* Assets.xcassets in Resources */,
-				7B9465C328A23A4B00DF123D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		061BFA8588F01FEB30F39B50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PocketGuthubC/Pods-PocketGuthubC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PocketGuthubC/Pods-PocketGuthubC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PocketGuthubC/Pods-PocketGuthubC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1F5EA74E81B266470449A55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PocketGuthubC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7B9465B128A23A4B00DF123D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B9465C028A23A4B00DF123D /* ViewController.m in Sources */,
+				7B9465E228A2566A00DF123D /* LoginInteractor.m in Sources */,
+				7BEA52E028A38C2D001405F8 /* UIColorConstants.m in Sources */,
+				7B9465C028A23A4B00DF123D /* LoginViewController.m in Sources */,
+				7BAF2F2928EFFFE30091C112 /* LoginViewConfigurator.m in Sources */,
+				7BEA52E428A38FD6001405F8 /* AuthService.m in Sources */,
 				7B9465BA28A23A4B00DF123D /* AppDelegate.m in Sources */,
+				7B9465D728A24EDF00DF123D /* LoginPresenter.m in Sources */,
+				7BAF2F2C28F02C180091C112 /* LoginViewRouter.m in Sources */,
 				7B9465CB28A23A4D00DF123D /* main.m in Sources */,
 				7B9465BD28A23A4B00DF123D /* SceneDelegate.m in Sources */,
 			);
@@ -156,14 +300,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7B9465C128A23A4B00DF123D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7B9465C228A23A4B00DF123D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7B9465C628A23A4D00DF123D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,19 +425,20 @@
 		};
 		7B9465CF28A23A4D00DF123D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8198F28B7C740FEAE890AE3F /* Pods-PocketGuthubC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KLZTQ9HHAP;
+				DEVELOPMENT_TEAM = Q993925G25;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PocketGuthubC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,19 +453,20 @@
 		};
 		7B9465D028A23A4D00DF123D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA8471DF837EC04B3F63A03B /* Pods-PocketGuthubC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KLZTQ9HHAP;
+				DEVELOPMENT_TEAM = Q993925G25;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PocketGuthubC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

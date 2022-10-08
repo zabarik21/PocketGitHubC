@@ -11,13 +11,16 @@
 
 #endif /* RepoCellViewData_h */
 
+#import "Repo.h"
+
 @interface RepoCellViewData: NSObject
-  @property NSString *reponame;
-  @property NSString *username;
-  @property NSString *repoDescription;
-  @property NSString *userImageString;
-  @property NSInteger forksCount;
-  @property NSInteger viewsCount;
+@property (nonatomic, strong) NSString *reponame;
+@property (nonatomic, strong) NSString *username;
+@property (nonatomic, strong) NSString *repoDescription;
+@property (nonatomic, strong) NSString *userImageString;
+@property (nonatomic) NSInteger forksCount;
+@property (nonatomic) NSInteger viewsCount;
+-(id)initWith:(Repo *)repo;
 @end
 
 

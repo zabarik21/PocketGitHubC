@@ -15,14 +15,21 @@
 @property RepoCountType type;
 @property (nonatomic, strong) UILabel *countLabel;
 @property (nonatomic, strong) UIImageView *countImage;
-@property NSInteger count;
+- (void)udpateCount:(NSInteger)count;
 @end
 
 @implementation RepoCountView
 
+- (void)setCount:(NSInteger)count {
+  if (_count != count) {
+    _count = count;
+    [self udpateCount:count];
+  }
+}
+
 - (UILabel *)countLabel {
   if (_countLabel == nil) {
-    _countLabel = [UILabel alloc];
+    _countLabel = [[UILabel alloc] init];
     _countLabel.font = [UIFont systemFontOfSize:12 weight:UIFontWeightBold];
     _countLabel.textColor = [UIColor repoCellUsernameTextColor];
   }
@@ -31,7 +38,7 @@
 
 - (UIImageView *)countImage {
   if (_countImage == nil) {
-    _countImage = UIImageView.new;
+    _countImage = [[UIImageView alloc] init];
     _countImage.image = [UIImage imageNamed:[self getImageName]];
     _countImage.contentMode = UIViewContentModeScaleAspectFit;
   }
@@ -39,8 +46,10 @@
 }
 
 - (id)initWithType:(RepoCountType)type {
-  self.type = type;
-  [self setupConstraints];
+  if (self = [super init]) {
+    self.type = type;
+    [self setupConstraints];
+  }
   return self;
 }
 

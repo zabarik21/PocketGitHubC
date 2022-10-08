@@ -7,11 +7,16 @@
 
 #import <Foundation/Foundation.h>
 #import "Interfaces/LoginViewRouterProtocol.h"
+#import "../RepoListModule/RepoListViewController.h"
 
 @implementation LoginViewRouter
 
 - (void)toRepoList {
-  NSLog(@"sd");
+  dispatch_async(dispatch_get_main_queue(), ^{
+    RepoListViewController *repoList = [[RepoListViewController alloc] init];
+    UIApplication.sharedApplication.windows[0].rootViewController = repoList;
+    [UIApplication.sharedApplication.windows[0] makeKeyAndVisible];
+  });
 }
 
 @end

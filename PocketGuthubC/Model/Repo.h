@@ -14,7 +14,8 @@
 @interface Repo : NSObject
 @property (strong, nonatomic, nonnull) NSString *name;
 @property (strong, nonatomic, nonnull) RepoOwner *owner;
-@property (nonatomic, nonnull) NSInteger *forks;
-@property (nonatomic, nonnull) NSInteger *watchers;
+@property (nonatomic) NSInteger forks;
+@property (nonatomic) NSInteger watchers;
 @property (strong, nonatomic, nullable) NSString *description;
+-(instancetype _Nonnull)templateRepo;
 @end

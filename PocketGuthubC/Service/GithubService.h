@@ -16,12 +16,12 @@
  
 @interface GithubService : NSObject
 //Result<[CommitApiResponce], Error>) -> Void
-+ (instancetype)shared;
++ (instancetype _Nonnull)shared;
 - (void)fetchRepos
-  :(NSArray<Repo *> *_Nullable (^)(void))onSuccess
-  :(NSError *_Nullable (^)(void))onFailure;
+  :(void (^_Nonnull)(NSArray<Repo *> *_Nullable))success
+  onFailure:(NSError *_Nullable (^_Nonnull)(void))failure;
 - (void)fetchCommitsFor
-  :(Repo *)repo
-  :(void (^)(NSArray<CommitResponce *>*_Nullable))onSuccess
-  :(void (^)(NSError *_Nullable))onFailure;
+  :(Repo *_Nonnull)repo
+  :(void (^_Nullable)(NSArray<CommitResponce *>*_Nullable))onSuccess
+  :(void (^_Nullable)(NSError *_Nullable))onFailure;
 @end

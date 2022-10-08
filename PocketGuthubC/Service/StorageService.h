@@ -13,7 +13,7 @@
 
 
 @interface StorageService : NSObject
-+ (instancetype)shared;
++ (instancetype _Nonnull )shared;
 -(void)saveToken:(NSString *_Nonnull)token;
 -(NSString* _Nullable)getToken;
 @end

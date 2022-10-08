@@ -10,8 +10,9 @@
 
 
 #endif /* Commit_h */
+#import "CommitAuthor.h"
 
 @interface Commit : NSObject
 @property (strong, nonatomic) NSString *message;
-@property (strong, nonatomic) NSString *committer;
+@property (strong, nonatomic) CommitAuthor *committer;
 @end

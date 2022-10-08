@@ -15,9 +15,16 @@
 
 @implementation RepoHeaderView
 
+-(instancetype)init {
+  if (self = [super initWithFrame:CGRectZero]) {
+    [self setTitle:@"title"];
+  }
+  return self;
+}
+
 - (UILabel *)titleLabel {
   if (_titleLabel == nil) {
-    _titleLabel = [UILabel alloc];
+    _titleLabel = [[UILabel alloc] init];
     _titleLabel.font = [UIFont systemFontOfSize:30 weight:UIFontWeightBold];
     _titleLabel.textColor = UIColor.whiteColor;
   }
@@ -33,17 +40,15 @@
   return @"RepoHeaderViewId";
 }
 - (void)setTitle:(NSString *)title {
-  dispatch_async(dispatch_get_main_queue(), ^{
-    _titleLabel.text = title;
-  });
+    self.titleLabel.text = title;
 }
 
 -(void)setupConstraints {
-  _titleLabel.translatesAutoresizingMaskIntoConstraints = false;
+  self.titleLabel.translatesAutoresizingMaskIntoConstraints = false;
   
-  [self addSubview:_titleLabel];
+  [self addSubview:self.titleLabel];
   
-  [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+  [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
     make.centerY.equalTo(self);
     make.leading.equalTo(self);
     make.trailing.equalTo(self);

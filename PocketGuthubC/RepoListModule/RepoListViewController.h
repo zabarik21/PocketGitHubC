@@ -14,8 +14,9 @@
 #import "RepoViewHeader/RepoHeaderView.h"
 #import "Entity/RepoCellViewData.h"
 
-
 #import "VIPER Protocols.h"
 
-@interface RepoListViewController : UICollectionViewController<RepoListViewInput>
+@interface RepoListViewController : UICollectionViewController<RepoListViewInput, UICollectionViewDelegateFlowLayout>
+@property (strong, nonatomic) id<RepoListViewOutput> presenter;
+-(instancetype)initWithLayout:(UICollectionViewLayout *)layout;
 @end

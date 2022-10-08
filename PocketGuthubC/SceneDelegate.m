@@ -11,6 +11,7 @@
 #import "SceneDelegate.h"
 #import "LoginModule/Interfaces/LoginViewController.h"
 #import "Service/AuthService.h"
+#import "RepoListModule/RepoListViewController.h"
 @interface SceneDelegate ()
 
 @end
@@ -33,10 +34,15 @@
   if ([scene isKindOfClass:[UIWindowScene class]])
   {
     UIWindowScene *windowScene = (UIWindowScene *)scene;
-    UIViewController *viewController = LoginViewController.new;
+    UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout alloc];
+    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    layout.minimumLineSpacing = 20;
+    layout.itemSize = CGSizeMake(300, 140);
+    RepoListViewController *repoList = [[RepoListViewController alloc] initWithLayout:layout];
+//    UIViewController *viewController = LoginViewController.new;
     UIWindow *window = [[UIWindow alloc] initWithWindowScene:windowScene];
     self.window = window;
-    window.rootViewController = viewController;
+    window.rootViewController = repoList;
     [window makeKeyAndVisible];
   }
 

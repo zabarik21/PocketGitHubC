@@ -13,11 +13,6 @@
 
 @implementation UIColor (Layout)
 
-+ (UIColor *) cellUserNameTextColor {
-    UIColor *color = [UIColor colorWithRed:166.0f/255.0f green:168.0f/255.0f        blue:179.0f/255.0f alpha:1.0f];
-    return color;
-};
-
 + (UIColor *) signInButtonColor {
     UIColor *color = [
       UIColor

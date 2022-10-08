@@ -6,6 +6,7 @@ target 'PocketGuthubC' do
   use_frameworks!
   pod 'Masonry'
   pod 'AFNetworking'
+  pod 'SDWebImage'
   # Pods for PocketGuthubC
 
 end

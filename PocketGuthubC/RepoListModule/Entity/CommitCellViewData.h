@@ -10,11 +10,12 @@
 
 
 #endif /* CommitCellViewData_h */
-
+#import "../../Model/CommitResponce.h"
 
 @interface CommitCellViewData : NSObject
-  @property NSString *date;
-  @property NSString *hash;
-  @property NSString *description;
-  @property NSString *username;
+@property (strong, nonatomic) NSString *date;
+@property (strong, nonatomic) NSString *hash;
+@property (strong, nonatomic) NSString *description;
+@property (strong, nonatomic) NSString *username;
+-(instancetype)initWith:(CommitResponce *)responce;
 @end

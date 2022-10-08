@@ -27,6 +27,18 @@ Constants const horizontalLogoMult = 0.164;
 Constants const horizontalFormMult = 0.167;
 Constants const topFormMult = 0.088;
 
+- (UIButton *)signInButton {
+  if (_signInButton == nil) {
+    _signInButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    _signInButton.backgroundColor = [UIColor signInButtonColor];
+    _signInButton.layer.cornerRadius = 5;
+    [_signInButton setTitle:@"Sign in" forState:UIControlStateNormal];
+    [_signInButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+    [_signInButton addTarget:self action:@selector(signInTouched) forControlEvents:UIControlEventTouchUpInside];
+  }
+  return  _signInButton;
+}
+
 -(id)init {
   if (self = [super init]) {
     self.configurator = [LoginViewConfigurator alloc];
@@ -43,17 +55,7 @@ Constants const topFormMult = 0.088;
 
 -(void) setupElements {
   [self setupLogo];
-  [self setupButton];
   [self setupConstraints];
-}
-
--(void) setupButton {
-  self.signInButton = [UIButton buttonWithType:UIButtonTypeSystem];
-  self.signInButton.backgroundColor = [UIColor signInButtonColor];
-  self.signInButton.layer.cornerRadius = 5;
-  [self.signInButton setTitle:@"Sign in" forState:UIControlStateNormal];
-  [self.signInButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-  [self.signInButton addTarget:self action:@selector(signInTouched) forControlEvents:UIControlEventTouchUpInside];
 }
 
 -(void) signInTouched {

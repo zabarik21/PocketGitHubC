@@ -17,5 +17,6 @@
 
 @interface RepoHeaderView : UICollectionReusableView<ReuseIdProtocol>
 +(NSString *)reuseId;
+-(instancetype)init;
 -(void)setTitle:(NSString *)title;
 @end

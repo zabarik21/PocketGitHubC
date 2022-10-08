@@ -33,14 +33,14 @@
 }
 
 -(void)startAuthentication {
-dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-  [self.authService tryOauth];
   [NSNotificationCenter.defaultCenter
    addObserver:self
    selector:@selector(authenticationSucceed)
-   name: clientIdKey
-     object:self
+   name: loginObserverKey
+   object: nil
   ];
+dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+  [self.authService tryOauth];
 });
   
 }

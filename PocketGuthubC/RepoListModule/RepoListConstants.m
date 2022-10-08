@@ -12,4 +12,5 @@
 NSString *headerTitle = @"Repositories";
 CGFloat headerHeight = 100.0;
 CGFloat cellHeight = 140.0;
+CGFloat horizontalPadding = 15.0;
 @end

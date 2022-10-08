@@ -16,4 +16,5 @@
 extern NSString *headerTitle;
 extern CGFloat headerHeight;
 extern CGFloat cellHeight;
+extern CGFloat horizontalPadding;
 @end

@@ -64,13 +64,13 @@
 }
 
 - (void)setupConstraints {
-  [self addSubview:_countLabel];
+  [self addSubview:self.countLabel];
   
   [_countLabel mas_makeConstraints:^(MASConstraintMaker *make) {
     make.trailing.top.bottom.equalTo(self);
   }];
   
-  [self addSubview:_countImage];
+  [self addSubview:self.countImage];
   
   [_countImage mas_makeConstraints:^(MASConstraintMaker *make) {
     make.width.equalTo(@12);

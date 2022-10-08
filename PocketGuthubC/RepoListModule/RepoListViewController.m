@@ -14,6 +14,7 @@
 #import "View/RepoCellView.h"
 #import "RepoListConstants.h"
 #import "RepoListConfigurator.h"
+#import "Masonry.h"
 
 @interface RepoListViewController ()
 @property (strong, nonatomic) NSObject<RepoListConfiguratorProtocol>* configurator;
@@ -85,11 +86,10 @@
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-  RepoCellView *cell = [collectionView
-                        dequeueReusableCellWithReuseIdentifier:[RepoCellView reuseId]
-                        forIndexPath:indexPath
-  ];
-  [cell init];
+  RepoCellView *cell = [[collectionView
+                         dequeueReusableCellWithReuseIdentifier:[RepoCellView reuseId]
+                         forIndexPath:indexPath
+   ] init];
   cell.viewData = [_presenter getViewDataFor:indexPath.row];
   return cell;
 }
@@ -105,9 +105,14 @@
 
 // MARK: - UICollectionViewDelegateFlowLayout
 
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+  UIEdgeInsets insets = UIEdgeInsetsMake(10.0, horizontalPadding, 20.0, -horizontalPadding);
+  return insets;
+}
+
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-  CGFloat width = collectionView.bounds.size.width - 15 * 2;
-  return CGSizeMake(width, cellHeight);
+  CGFloat width = collectionView.bounds.size.width;
+  return CGSizeMake(width - horizontalPadding * 2, cellHeight);
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {

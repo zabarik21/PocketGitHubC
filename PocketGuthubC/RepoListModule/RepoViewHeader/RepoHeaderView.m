@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "RepoHeaderView.h"
 #import "Masonry.h"
+#import "RepoListConstants.h"
 
 @interface RepoHeaderView()
 @property (nonatomic, strong) UILabel *titleLabel;
@@ -50,7 +51,7 @@
   
   [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
     make.centerY.equalTo(self);
-    make.leading.equalTo(self);
+    make.leading.equalTo(self).offset(horizontalPadding);
     make.trailing.equalTo(self);
   }];
 }

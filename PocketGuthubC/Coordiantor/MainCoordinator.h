@@ -17,4 +17,5 @@
 -(id)init;
 -(void)start;
 -(void)toRepoList;
++ (instancetype)shared;
 @end

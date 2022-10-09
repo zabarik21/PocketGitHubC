@@ -32,7 +32,7 @@
 }
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions  API_AVAILABLE(ios(13.0)) {
-  _mainCoordinator = [[MainCoordinator alloc] init];
+  _mainCoordinator = MainCoordinator.shared;
   if ([scene isKindOfClass:[UIWindowScene class]])
   {
     UIWindowScene *windowScene = (UIWindowScene *)scene;

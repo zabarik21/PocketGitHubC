@@ -8,8 +8,9 @@
 #import "AppDelegate.h"
 #import "Service/AuthService.h"
 #import "Service/GithubService.h"
+#import "MainCoordinator.h"
 @interface AppDelegate ()
-  
+@property MainCoordinator *mainCoordinator;
 @end
 
 @implementation AppDelegate
@@ -19,10 +20,11 @@
   if (@available(iOS 13.0, *)) {
     
   } else {
-    UIViewController *controller = [[UIViewController alloc] init];
-    self.window = UIWindow.new;
-    self.window.rootViewController = controller;
+    _mainCoordinator = MainCoordinator.shared;
+    
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     [self.window makeKeyAndVisible];
+    [_mainCoordinator start];
   }
   return YES;
 }

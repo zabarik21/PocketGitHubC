@@ -21,6 +21,16 @@
 
 @implementation MainCoordinator
 
++ (instancetype)shared
+{
+  static MainCoordinator *sharedInstance = nil;
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    sharedInstance = [[MainCoordinator alloc] init];
+  });
+  return sharedInstance;
+}
+
 - (id)init {
   if (self = [super init]) {
     _auth = AuthService.shared;

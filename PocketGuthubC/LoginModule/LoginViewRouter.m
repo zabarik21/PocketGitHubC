@@ -12,10 +12,13 @@
 @implementation LoginViewRouter
 
 - (void)toRepoList {
+//  dispatch_async(dispatch_get_main_queue(), ^{
+//    RepoListViewController *repoList = [[RepoListViewController alloc] init];
+//    UIApplication.sharedApplication.windows[0].rootViewController = repoList;
+//    [UIApplication.sharedApplication.windows[0] makeKeyAndVisible];
+//  });
   dispatch_async(dispatch_get_main_queue(), ^{
-    RepoListViewController *repoList = [[RepoListViewController alloc] init];
-    UIApplication.sharedApplication.windows[0].rootViewController = repoList;
-    [UIApplication.sharedApplication.windows[0] makeKeyAndVisible];
+    [self->_coordinator toRepoList];
   });
 }
 

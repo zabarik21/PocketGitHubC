@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2A8B73FB79E5244892401810 /* Pods_PocketGuthubC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DB156D205CBF3C7C3C9779 /* Pods_PocketGuthubC.framework */; };
+		7B01578328F2962400D0A842 /* MainCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B01578228F2962400D0A842 /* MainCoordinator.m */; };
+		7B01578728F2990300D0A842 /* UINavigationController + Transparent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B01578628F2990300D0A842 /* UINavigationController + Transparent.m */; };
 		7B8EFE4228F041ED00BB2A28 /* AuthConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE4128F041ED00BB2A28 /* AuthConstants.m */; };
 		7B8EFE4528F04BA100BB2A28 /* StorageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE4428F04BA100BB2A28 /* StorageService.m */; };
 		7B8EFE4828F04F8000BB2A28 /* GithubService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE4728F04F8000BB2A28 /* GithubService.m */; };
@@ -41,12 +43,15 @@
 		7B9D140F28F15B6C004F3B3B /* NSString + Prefix.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D140E28F15B6C004F3B3B /* NSString + Prefix.m */; };
 		7BAF2F2928EFFFE30091C112 /* LoginViewConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAF2F2828EFFFE30091C112 /* LoginViewConfigurator.m */; };
 		7BAF2F2C28F02C180091C112 /* LoginViewRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAF2F2B28F02C180091C112 /* LoginViewRouter.m */; };
-		7BEA52E028A38C2D001405F8 /* UIColorConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA52DF28A38C2D001405F8 /* UIColorConstants.m */; };
 		7BEA52E428A38FD6001405F8 /* AuthService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA52E328A38FD6001405F8 /* AuthService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		03DB156D205CBF3C7C3C9779 /* Pods_PocketGuthubC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketGuthubC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B01578128F2961D00D0A842 /* MainCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainCoordinator.h; sourceTree = "<group>"; };
+		7B01578228F2962400D0A842 /* MainCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainCoordinator.m; sourceTree = "<group>"; };
+		7B01578528F298FD00D0A842 /* UINavigationController + Transparent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController + Transparent.h"; sourceTree = "<group>"; };
+		7B01578628F2990300D0A842 /* UINavigationController + Transparent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController + Transparent.m"; sourceTree = "<group>"; };
 		7B8EFE4028F041A900BB2A28 /* AuthConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthConstants.h; sourceTree = "<group>"; };
 		7B8EFE4128F041ED00BB2A28 /* AuthConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthConstants.m; sourceTree = "<group>"; };
 		7B8EFE4328F04B9B00BB2A28 /* StorageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StorageService.h; sourceTree = "<group>"; };
@@ -118,7 +123,6 @@
 		7BAF2F2A28F023790091C112 /* LoginViewPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewPresenter.h; sourceTree = "<group>"; };
 		7BAF2F2B28F02C180091C112 /* LoginViewRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewRouter.m; sourceTree = "<group>"; };
 		7BAF2F2D28F02D410091C112 /* LoginViewInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewInteractor.h; sourceTree = "<group>"; };
-		7BEA52DF28A38C2D001405F8 /* UIColorConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIColorConstants.m; sourceTree = "<group>"; };
 		7BEA52E128A38E62001405F8 /* UIColorConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIColorConstants.h; sourceTree = "<group>"; };
 		7BEA52E328A38FD6001405F8 /* AuthService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthService.m; sourceTree = "<group>"; };
 		7BEA52E528A3FE83001405F8 /* AuthService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthService.h; sourceTree = "<group>"; };
@@ -138,6 +142,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B01578028F295F400D0A842 /* Coordiantor */ = {
+			isa = PBXGroup;
+			children = (
+				7B01578128F2961D00D0A842 /* MainCoordinator.h */,
+				7B01578228F2962400D0A842 /* MainCoordinator.m */,
+			);
+			path = Coordiantor;
+			sourceTree = "<group>";
+		};
+		7B01578428F298E800D0A842 /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				7B01578528F298FD00D0A842 /* UINavigationController + Transparent.h */,
+				7B01578628F2990300D0A842 /* UINavigationController + Transparent.m */,
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
 		7B8EFE4628F04F5500BB2A28 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +244,7 @@
 		7B8EFE7028F0851A00BB2A28 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				7B01578428F298E800D0A842 /* UINavigationController */,
 				7B8EFE7F28F0A1F300BB2A28 /* View */,
 				7B8EFE7128F0854D00BB2A28 /* UIViewController + UIAlertController.h */,
 				7B8EFE7228F0855200BB2A28 /* UIViewController + UIAlertController.m */,
@@ -270,6 +293,7 @@
 		7B9465B728A23A4B00DF123D /* PocketGuthubC */ = {
 			isa = PBXGroup;
 			children = (
+				7B01578028F295F400D0A842 /* Coordiantor */,
 				7B8EFE6828F0685B00BB2A28 /* Library */,
 				7B8EFE6028F0675900BB2A28 /* RepoListModule */,
 				7B8EFE4628F04F5500BB2A28 /* Model */,
@@ -336,7 +360,6 @@
 		7BEA52DD28A38C06001405F8 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				7BEA52DF28A38C2D001405F8 /* UIColorConstants.m */,
 				7BEA52E128A38E62001405F8 /* UIColorConstants.h */,
 			);
 			path = Constants;
@@ -493,9 +516,9 @@
 			files = (
 				7B9D140228F14E7C004F3B3B /* RepoListInteractor.m in Sources */,
 				7B9465E228A2566A00DF123D /* LoginInteractor.m in Sources */,
-				7BEA52E028A38C2D001405F8 /* UIColorConstants.m in Sources */,
 				7B8EFE4F28F05F6300BB2A28 /* Commit.m in Sources */,
 				7B9465C028A23A4B00DF123D /* LoginViewController.m in Sources */,
+				7B01578728F2990300D0A842 /* UINavigationController + Transparent.m in Sources */,
 				7B8EFE4228F041ED00BB2A28 /* AuthConstants.m in Sources */,
 				7B8EFE7A28F0904600BB2A28 /* RepoCellView.m in Sources */,
 				7BAF2F2928EFFFE30091C112 /* LoginViewConfigurator.m in Sources */,
@@ -508,6 +531,7 @@
 				7B8EFE6F28F0849E00BB2A28 /* RepoCellViewData.m in Sources */,
 				7B9465BA28A23A4B00DF123D /* AppDelegate.m in Sources */,
 				7B9D140428F14E85004F3B3B /* RepoListPresenter.m in Sources */,
+				7B01578328F2962400D0A842 /* MainCoordinator.m in Sources */,
 				7B9465D728A24EDF00DF123D /* LoginPresenter.m in Sources */,
 				7B8EFE5828F0603A00BB2A28 /* GithubUser.m in Sources */,
 				7B9D13FF28F14D0F004F3B3B /* RepoListConstants.m in Sources */,

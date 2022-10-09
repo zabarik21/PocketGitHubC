@@ -12,8 +12,10 @@
 #import "LoginModule/Interfaces/LoginViewController.h"
 #import "Service/AuthService.h"
 #import "RepoListModule/RepoListViewController.h"
-@interface SceneDelegate ()
+#import "Coordiantor/MainCoordinator.h"
 
+@interface SceneDelegate ()
+@property MainCoordinator *mainCoordinator;
 @end
 
 @implementation SceneDelegate
@@ -30,19 +32,13 @@
 }
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions  API_AVAILABLE(ios(13.0)) {
- 
+  _mainCoordinator = [[MainCoordinator alloc] init];
   if ([scene isKindOfClass:[UIWindowScene class]])
   {
     UIWindowScene *windowScene = (UIWindowScene *)scene;
-    UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout alloc];
-    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    layout.minimumLineSpacing = 20;
-    layout.itemSize = CGSizeMake(300, 140);
-    RepoListViewController *repoList = [[RepoListViewController alloc] initWithLayout:layout];
-//    UIViewController *viewController = LoginViewController.new;
     UIWindow *window = [[UIWindow alloc] initWithWindowScene:windowScene];
     self.window = window;
-    window.rootViewController = repoList;
+    [_mainCoordinator start];
     [window makeKeyAndVisible];
   }
 

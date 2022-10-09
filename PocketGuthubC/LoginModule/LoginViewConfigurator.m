@@ -15,11 +15,12 @@
 
 @implementation LoginViewConfigurator
 
-- (void)configure:(LoginViewController *)view {
+- (void)configure:(LoginViewController *)view withCoordinator:(MainCoordinator *)coordinator {
   LoginViewPresenter *presenter = [[LoginViewPresenter new] initWithView:view];
   LoginViewRouter *router = [LoginViewRouter new];
   LoginInteractor *interactor = [[LoginInteractor new] initWithPresenter:presenter];
   
+  router.coordinator = coordinator;
   presenter.router = router;
   presenter.interactor = interactor;
   view.presenter = presenter;

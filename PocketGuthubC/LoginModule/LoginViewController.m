@@ -39,13 +39,14 @@ Constants const topFormMult = 0.088;
   return  _signInButton;
 }
 
--(id)init {
+- (id)initWithCoordinator:(MainCoordinator *)coordinator {
   if (self = [super init]) {
     self.configurator = [LoginViewConfigurator alloc];
-    [_configurator configure:self];
+    [_configurator configure:self withCoordinator:coordinator];
   }
   return self;
 }
+
 
 - (void)viewDidLoad {
   [super viewDidLoad];

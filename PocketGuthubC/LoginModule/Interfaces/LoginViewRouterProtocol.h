@@ -13,6 +13,7 @@
 
 #import "LoginViewInputProtocol.h"
 #import <Foundation/Foundation.h>
+#import "MainCoordinator.h"
 
 @protocol LoginViewRouterProtocol <NSObject>
 @required
@@ -20,5 +21,6 @@
 @end
 
 @interface LoginViewRouter : NSObject<LoginViewRouterProtocol>
+@property (weak, nonatomic) MainCoordinator *coordinator;
 -(void) toRepoList;
 @end

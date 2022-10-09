@@ -15,15 +15,15 @@
 
 
 //#import "../LoginViewController.h"
+#import "MainCoordinator.h"
 
 @class LoginViewController;
 
 @protocol LoginViewConfiguratorProtocol 
 @required
--(void)configure:(LoginViewController *)view;
+-(void)configure:(LoginViewController *)view withCoordinator:(MainCoordinator *)coordinator;
 @end
 
 
 @interface LoginViewConfigurator : NSObject<LoginViewConfiguratorProtocol>
-- (void)configure:(LoginViewController *)view;
 @end

@@ -10,10 +10,12 @@
 #import "LoginViewOutputProtocol.h"
 #import "LoginViewInputProtocol.h"
 #import "LoginViewConfiguratorProtocol.h"
+#import "MainCoordinator.h"
 
 
 @interface LoginViewController: UIViewController<LoginViewInputProtocol>
 @property (nonatomic, strong) NSObject<LoginViewOutputProtocol> *presenter;
 @property (nonatomic, strong) NSObject<LoginViewConfiguratorProtocol> *configurator;
+-(id)initWithCoordinator:(MainCoordinator *)coordinator;
 @end
 

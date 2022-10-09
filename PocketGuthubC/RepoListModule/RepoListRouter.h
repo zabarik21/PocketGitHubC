@@ -11,8 +11,8 @@
 
 #endif /* RepoListRouter_h */
 #import "VIPER Protocols.h"
-
+#import <UIKit/UIKit.h>
 
 @interface RepoListRouter : NSObject<RepoListRouterProtocol>
-
+@property (weak, nonatomic) UIViewController *view;
 @end

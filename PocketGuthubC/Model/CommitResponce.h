@@ -12,7 +12,10 @@
 #endif /* CommitResponce_h */
 #import "Commit.h"
 
+
+
 @interface CommitResponce : NSObject
 @property (strong, nonatomic, nonnull) NSString *sha;
 @property (strong, nonatomic, nonnull) Commit *commit;
+-(id)initFromDict:(NSDictionary *)dict;
 @end

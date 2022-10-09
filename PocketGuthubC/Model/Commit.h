@@ -12,6 +12,8 @@
 #endif /* Commit_h */
 #import "CommitAuthor.h"
 
+
+
 @interface Commit : NSObject
 @property (strong, nonatomic) NSString *message;
 @property (strong, nonatomic) CommitAuthor *committer;

@@ -14,8 +14,8 @@
 
 @interface CommitCellViewData : NSObject
 @property (strong, nonatomic) NSString *date;
-@property (strong, nonatomic) NSString *hash;
-@property (strong, nonatomic) NSString *description;
+@property (strong, nonatomic) NSString *hashString;
+@property (strong, nonatomic) NSString *commitDescription;
 @property (strong, nonatomic) NSString *username;
--(instancetype)initWith:(CommitResponce *)responce;
+-(id)initWith:(CommitResponce *)responce;
 @end

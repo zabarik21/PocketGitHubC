@@ -19,9 +19,9 @@
 + (instancetype _Nonnull)shared;
 - (void)fetchRepos
   :(void (^_Nonnull)(NSArray<Repo *> *_Nullable))success
-  onFailure:(NSError *_Nullable (^_Nonnull)(void))failure;
+  onFailure:(void (^_Nonnull)(NSError *_Nonnull))failure;
 - (void)fetchCommitsFor
   :(Repo *_Nonnull)repo
   :(void (^_Nullable)(NSArray<CommitResponce *>*_Nullable))onSuccess
-  :(void (^_Nullable)(NSError *_Nullable))onFailure;
+  :(void (^_Nullable)(NSError *_Nonnull))onFailure;
 @end

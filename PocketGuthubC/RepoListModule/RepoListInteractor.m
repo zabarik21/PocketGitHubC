@@ -10,6 +10,7 @@
 #import "VIPER Protocols.h"
 #import "../Service/GithubService.h"
 
+
 @interface RepoListInteractor ()
 @property (strong, nonatomic) GithubService *githubService;
 @property (strong, nonatomic) NSMutableArray<Repo *> *repos;
@@ -17,28 +18,34 @@
 
 @implementation RepoListInteractor
 
+-(id)init {
+  if (self = [super init]) {
+    _githubService = GithubService.shared;
+    _repos = [[NSMutableArray<Repo *> alloc] init];
+  }
+  return self;
+}
+
 - (void)fetchCommitsFor:(Repo *)repo {
-  
+  [_githubService fetchCommitsFor:repo :^(NSArray<CommitResponce *> * _Nullable commits) {
+    [self->_presenter commitsRecieved:commits];
+  } :^(NSError * _Nullable error) {
+    [self->_presenter errorOccured:error.localizedDescription];
+  }];
 }
 
 - (void)fetchRepos {
-  NSArray<Repo *> *repos = @[
-    [[Repo alloc] templateRepo],
-    [[Repo alloc] templateRepo],
-    [[Repo alloc] templateRepo],
-    [[Repo alloc] templateRepo],
-    [[Repo alloc] templateRepo],
-    [[Repo alloc] templateRepo],
-    [[Repo alloc] templateRepo],
-    [[Repo alloc] templateRepo]
-  ];
-  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+  [_githubService fetchRepos:^(NSArray<Repo *> * _Nullable repos) {
+    self.repos = repos;
     [self->_presenter reposRecieved:repos];
-  });
+  } onFailure:^(NSError *error) {
+    [self->_presenter errorOccured:error.localizedDescription];
+  }];
+  
 }
 
 - (Repo *)getRepoAt:(NSInteger)index {
-  return [[Repo alloc] templateRepo];
+    return [_repos objectAtIndex:index];
 }
 
 @end

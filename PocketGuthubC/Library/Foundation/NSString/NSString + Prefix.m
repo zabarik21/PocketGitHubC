@@ -28,7 +28,7 @@
 }
 
 - (NSString *)prefix:(NSInteger)length {
-  NSMutableString *new = [NSMutableString init];
+  NSMutableString *new = [[NSMutableString alloc] init];
   for(int i = 0; i < length; i++) {
     unichar part = [self characterAtIndex:i];
     NSString* s = [NSString stringWithCharacters:&part length:1];

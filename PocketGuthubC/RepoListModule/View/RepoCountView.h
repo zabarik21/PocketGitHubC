@@ -19,5 +19,5 @@ typedef NS_ENUM(NSInteger, RepoCountType){
 
 @interface RepoCountView : UIView
 -(id)initWithType:(RepoCountType)type;
-@property (nonatomic) NSInteger count;
+@property (nonatomic) NSNumber *count;
 @end

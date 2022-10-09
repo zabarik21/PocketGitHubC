@@ -11,7 +11,7 @@
 
 #endif /* RepoOwner_h */
 
-
+ 
 @interface RepoOwner : NSObject
 @property (strong, nonatomic) NSString *login;
 @property (strong, nonatomic) NSString *avatar_url;

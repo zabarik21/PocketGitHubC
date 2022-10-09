@@ -17,4 +17,5 @@
 
 @interface RepoListInteractor : NSObject<RepoListInteractorInput>
 @property (weak, nonatomic) id<RepoListInteractorOutput> presenter;
+-(id)init;
 @end

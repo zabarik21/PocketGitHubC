@@ -101,7 +101,7 @@
   _forksCountView.count = viewData.forksCount;
   _viewsCountView.count = viewData.viewsCount;
   _reponameLabel.text = viewData.reponame;
-  _descriptionLabel.text = viewData.description;
+  _descriptionLabel.text = viewData.repoDescription;
   _usernameLabel.text = viewData.username;
   NSURL *url = [NSURL URLWithString:viewData.userImageString];
   if (url != nil) {

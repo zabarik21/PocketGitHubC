@@ -31,8 +31,9 @@
   return _viewData;
 }
 
-- (void)commitsRecieved:(NSArray<CommitResponce *> *)commits { 
-  NSMutableArray<CommitCellViewData *> *commitData = NSMutableArray.new;
+- (void)commitsRecieved:(NSArray<CommitResponce *> *)commits {
+  [_repoView toggleActivityIndicatorTo:false];
+  NSMutableArray<CommitCellViewData *> *commitData = [[NSMutableArray alloc] init];
   for (CommitResponce* responce in commits) {
     [commitData addObject:[[CommitCellViewData alloc] initWith:responce]];
   }
@@ -61,6 +62,7 @@
 }
 
 - (void)itemTapped:(NSInteger)index {
+  [_repoView toggleActivityIndicatorTo:true];
   Repo* repo = [_interactor getRepoAt:index];
   [_interactor fetchCommitsFor:repo];
 }

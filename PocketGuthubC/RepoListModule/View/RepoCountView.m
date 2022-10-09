@@ -15,12 +15,12 @@
 @property RepoCountType type;
 @property (nonatomic, strong) UILabel *countLabel;
 @property (nonatomic, strong) UIImageView *countImage;
-- (void)udpateCount:(NSInteger)count;
+- (void)udpateCount:(NSNumber *)count;
 @end
 
 @implementation RepoCountView
 
-- (void)setCount:(NSInteger)count {
+- (void)setCount:(NSNumber *)count {
   if (_count != count) {
     _count = count;
     [self udpateCount:count];
@@ -53,12 +53,12 @@
   return self;
 }
 
-- (void)udpateCount:(NSInteger)count {
+- (void)udpateCount:(NSNumber *)count {
   dispatch_async(dispatch_get_main_queue(), ^{
-    if (count > 9999) {
-      self.countLabel.text = @"9999+";
+    if ([count intValue] > 999) {
+      self.countLabel.text = @"999+";
     } else {
-      self.countLabel.text = [@(count) stringValue];
+      self.countLabel.text = [count stringValue];
     }
   });
 }

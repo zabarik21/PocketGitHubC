@@ -14,7 +14,7 @@
   if (self == [super init]) {
     self.reponame = repo.name;
     self.username = repo.owner.login;
-    self.repoDescription = repo.description;
+    self.repoDescription = repo.repoDescription;
     self.userImageString = repo.owner.avatar_url;
     self.forksCount = repo.forks;
     self.viewsCount = repo.watchers;

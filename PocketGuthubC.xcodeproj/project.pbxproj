@@ -10,6 +10,9 @@
 		2A8B73FB79E5244892401810 /* Pods_PocketGuthubC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DB156D205CBF3C7C3C9779 /* Pods_PocketGuthubC.framework */; };
 		7B01578328F2962400D0A842 /* MainCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B01578228F2962400D0A842 /* MainCoordinator.m */; };
 		7B01578728F2990300D0A842 /* UINavigationController + Transparent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B01578628F2990300D0A842 /* UINavigationController + Transparent.m */; };
+		7B01578B28F2EFED00D0A842 /* CommitListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B01578A28F2EFED00D0A842 /* CommitListView.m */; };
+		7B01578F28F2F1CC00D0A842 /* CommitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B01578E28F2F1CC00D0A842 /* CommitCell.m */; };
+		7B01579428F2F3FF00D0A842 /* UILabel + init.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B01579328F2F3FF00D0A842 /* UILabel + init.m */; };
 		7B8EFE4228F041ED00BB2A28 /* AuthConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE4128F041ED00BB2A28 /* AuthConstants.m */; };
 		7B8EFE4528F04BA100BB2A28 /* StorageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE4428F04BA100BB2A28 /* StorageService.m */; };
 		7B8EFE4828F04F8000BB2A28 /* GithubService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFE4728F04F8000BB2A28 /* GithubService.m */; };
@@ -52,6 +55,12 @@
 		7B01578228F2962400D0A842 /* MainCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainCoordinator.m; sourceTree = "<group>"; };
 		7B01578528F298FD00D0A842 /* UINavigationController + Transparent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController + Transparent.h"; sourceTree = "<group>"; };
 		7B01578628F2990300D0A842 /* UINavigationController + Transparent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController + Transparent.m"; sourceTree = "<group>"; };
+		7B01578A28F2EFED00D0A842 /* CommitListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommitListView.m; sourceTree = "<group>"; };
+		7B01578C28F2EFF700D0A842 /* CommitListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommitListView.h; sourceTree = "<group>"; };
+		7B01578E28F2F1CC00D0A842 /* CommitCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommitCell.m; sourceTree = "<group>"; };
+		7B01579028F2F1D000D0A842 /* CommitCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommitCell.h; sourceTree = "<group>"; };
+		7B01579228F2F3F600D0A842 /* UILabel + init.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel + init.h"; sourceTree = "<group>"; };
+		7B01579328F2F3FF00D0A842 /* UILabel + init.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel + init.m"; sourceTree = "<group>"; };
 		7B8EFE4028F041A900BB2A28 /* AuthConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthConstants.h; sourceTree = "<group>"; };
 		7B8EFE4128F041ED00BB2A28 /* AuthConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthConstants.m; sourceTree = "<group>"; };
 		7B8EFE4328F04B9B00BB2A28 /* StorageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StorageService.h; sourceTree = "<group>"; };
@@ -160,6 +169,34 @@
 			path = UINavigationController;
 			sourceTree = "<group>";
 		};
+		7B01578928F2EFD600D0A842 /* CommitListModule */ = {
+			isa = PBXGroup;
+			children = (
+				7B01578D28F2F1B800D0A842 /* CommitCell */,
+				7B01578A28F2EFED00D0A842 /* CommitListView.m */,
+				7B01578C28F2EFF700D0A842 /* CommitListView.h */,
+			);
+			path = CommitListModule;
+			sourceTree = "<group>";
+		};
+		7B01578D28F2F1B800D0A842 /* CommitCell */ = {
+			isa = PBXGroup;
+			children = (
+				7B01578E28F2F1CC00D0A842 /* CommitCell.m */,
+				7B01579028F2F1D000D0A842 /* CommitCell.h */,
+			);
+			path = CommitCell;
+			sourceTree = "<group>";
+		};
+		7B01579128F2F3EB00D0A842 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				7B01579228F2F3F600D0A842 /* UILabel + init.h */,
+				7B01579328F2F3FF00D0A842 /* UILabel + init.m */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
 		7B8EFE4628F04F5500BB2A28 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +281,7 @@
 		7B8EFE7028F0851A00BB2A28 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				7B01579128F2F3EB00D0A842 /* UILabel */,
 				7B01578428F298E800D0A842 /* UINavigationController */,
 				7B8EFE7F28F0A1F300BB2A28 /* View */,
 				7B8EFE7128F0854D00BB2A28 /* UIViewController + UIAlertController.h */,
@@ -293,6 +331,7 @@
 		7B9465B728A23A4B00DF123D /* PocketGuthubC */ = {
 			isa = PBXGroup;
 			children = (
+				7B01578928F2EFD600D0A842 /* CommitListModule */,
 				7B01578028F295F400D0A842 /* Coordiantor */,
 				7B8EFE6828F0685B00BB2A28 /* Library */,
 				7B8EFE6028F0675900BB2A28 /* RepoListModule */,
@@ -526,6 +565,7 @@
 				7B8EFE8128F0A1FD00BB2A28 /* CircleImageView.m in Sources */,
 				7B8EFE7E28F0974C00BB2A28 /* RepoCountView.m in Sources */,
 				7B8EFE5628F05FFE00BB2A28 /* RepoOwner.m in Sources */,
+				7B01578F28F2F1CC00D0A842 /* CommitCell.m in Sources */,
 				7BEA52E428A38FD6001405F8 /* AuthService.m in Sources */,
 				7B8EFE5128F05F9400BB2A28 /* CommitAuthor.m in Sources */,
 				7B8EFE6F28F0849E00BB2A28 /* RepoCellViewData.m in Sources */,
@@ -541,8 +581,10 @@
 				7B8EFE4828F04F8000BB2A28 /* GithubService.m in Sources */,
 				7B8EFE5C28F060B000BB2A28 /* CommitResponce.m in Sources */,
 				7B9465CB28A23A4D00DF123D /* main.m in Sources */,
+				7B01578B28F2EFED00D0A842 /* CommitListView.m in Sources */,
 				7B8EFE5F28F0615A00BB2A28 /* Repo.m in Sources */,
 				7B8EFE7328F0855200BB2A28 /* UIViewController + UIAlertController.m in Sources */,
+				7B01579428F2F3FF00D0A842 /* UILabel + init.m in Sources */,
 				7B8EFE7728F089EE00BB2A28 /* CommitCellViewData.m in Sources */,
 				7B8EFE6728F067EC00BB2A28 /* RepoListViewController.m in Sources */,
 				7B9465BD28A23A4B00DF123D /* SceneDelegate.m in Sources */,

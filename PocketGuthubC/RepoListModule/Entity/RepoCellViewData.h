@@ -18,8 +18,8 @@
 @property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSString *repoDescription;
 @property (nonatomic, strong) NSString *userImageString;
-@property (nonatomic) NSInteger forksCount;
-@property (nonatomic) NSInteger viewsCount;
+@property (nonatomic, strong) NSNumber *forksCount;
+@property (nonatomic, strong) NSNumber *viewsCount;
 -(id)initWith:(Repo *)repo;
 @end
 

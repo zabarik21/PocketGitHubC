@@ -66,17 +66,17 @@
   [items setValue:redirectURI forKey:redirectURIKey];
   [items setValue:code forKey:codeKey];
   
-  NSMutableDictionary<NSString*, NSString*> *params = [NSMutableDictionary new];
-  [params setValue:@"application/json" forKey:@"Accept"];
   
   AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
   
   [manager
    POST:accessTokenURL
    parameters:items
-   headers: params
+   headers: @{
+    @"Accept": @"application/json"
+  }
    progress:^(NSProgress * _Nonnull uploadProgress) {
-    NSLog(@"%@", uploadProgress);
+    
   } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
     [self handleCodeResponce:responseObject];
   } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
